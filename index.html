@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Halloween Quiz</title>
+    <link href = "style.css" rel ="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Niramit" rel="stylesheet">
+    <script src = "main.js"></script>
+</head>
+<body>
+
+    <h1>Spooky Scary SkeleQuiz</h1>
+
+    <form id = "quiz" name = "quiz">
+<p>What is the name of the vehicle featured in Scooby Doo?</p>
+<input id = "textbox" type = "text" name = "question1">
+
+<p>How many Halloween Town movies are there?</p>
+<input type="radio" name="question2" value="3" >3<br>
+  <input type="radio" name="question2" value="4"> 4<br>
+  <input type="radio" name="question2" value="7"> 7 <br>
+
+  <p>Is Nightmare Before Christmas a Halloween or Christmas movie?</p>
+<input type="radio" name="question3" value="Halloween" >Halloween<br>
+  <input type="radio" name="question3" value="Christmas"> Christmas<br>
+  <input type="radio" name="question3" value="Both"> Both <br>
+
+  <input id ="button" type = "button" value = "Submit!" onclick="check();">
+
+
+    </form>
+    <div id = "after_submit">
+        <p id = "message"></p>
+        <p id = "number_correct"></p>
+        <img id = "picture">
+    </div>
+    
+</body>
+</html>
