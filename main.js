@@ -6,49 +6,50 @@ function check(){
     
  
 
-    let psycho = 0;
+   /* let psycho = 0;
     let hocus = 0;
     let getOut = 0;
     let saw = 0;
-    let beetle = 0;
+    let beetle = 0; */
+    let score = 0;
 
 
-
+//Question 1
     if(question1 == "day"){ //I remember it being called two different things so that's why there can be 2 answers.//
-        hocus++;
+        score = score + 0.5;
     }
     if(question1 == "night"){
-        getOut++;
+        score = score +3.1;
     }
-
+//Question 2
     if(question2 == "Candy Corn"){
-        psycho++;
+        score = score + 2;
     }
 if(question2 == "Chocolate"){
-    saw++;
+    score = score + 4.5;
 }
 
 if(question2 == "Any candy"){
-        hocus++;
+        score = score + 0.5;
     }
-
+//Question 3
     if(question3 == "Disney Princess"){
-        beetle++;
+        score = score + 5;
     }
 
     if(question3 == "Serial killer"){
-        psycho++;
+        score = score + 2;
     }
 
     if(question3 == "Superhero"){
-    hocus++;
+    score = score + 0.5;
     }
     if(question3 == "Witch"){
-        hocus++;
+        score = score + 0.5;
     }
     
     if(question3 == "A hypnotist"){
-        getOut++;
+        score = score + 3.1;
     }
        
    
@@ -59,65 +60,27 @@ if(question2 == "Any candy"){
 
     let range;
  //make into cases once program starts to work
-    if(beetle > 1){
+    if(score <= 12 && score >= 6){
         range = 2;
     } 
-     if(hocus > 1){
+     if(score <= 9.5 && score >= 1.5 ){
         range = 3;
     }
-     if(psycho > 1){
+     if(score <= 10 && score >= 3){
         range = 0;
     }
-    if(saw > 1){
+    if(score <= 12.5 && score >= 5.5){
         range = 1;
     }
 
-    if(getOut > 1){
+    if(score <= 12.6 && score >= 4.1 ){
         range = 4;
     }
-
-    //also make this into cases once program begins working
-    if(beetle && psycho == 1){
-    range = 5;
-    document.getElementById("message").innerHTML = "Watch BeetleJuice & Psycho"
-    } 
-    if(beetle && saw == 1){
-        range = 5;
-        document.getElementById("message").innerHTML = "Watch BeetleJuice & Saw"
-        }
-        if(beetle && hocus == 1){
-            range = 5;
-            document.getElementById("message").innerHTML = "Watch BeetleJuice & Hocus Pocus"
-            }
-            if(beetle && getOut == 1){
-                range = 5;
-                document.getElementById("message").innerHTML = "Watch BeetleJuice & Get Out"
-                }
-                if(saw && psycho == 1){
-                    range = 5;
-                    document.getElementById("message").innerHTML = "Watch Saw & Psycho"
-                    }
-                    if(saw && hocus == 1){
-                        range = 5;
-                        document.getElementById("message").innerHTML = "Watch Saw & Hocus Pocus"
-                        }
-                        if(saw && getOut == 1){
-                            range = 5;
-                            document.getElementById("message").innerHTML = "Watch Saw & Get Out"
-                            }
-                            if(hocus && psycho == 1){
-                                range = 5;
-                                document.getElementById("message").innerHTML = "Watch Hocus Pocus & Psycho"
-                                }
-                                if(getOut && psycho == 1){
-                                    range = 5;
-                                    document.getElementById("message").innerHTML = "Watch Get Out & Psycho"
-                                    }
 
     
 
 document.getElementById("after_submit").style.visibility = "visible"; //Makes end page visible to the user
 document.getElementById("message").innerHTML = "Watch " + messages[range];
-//document.getElementById("number_correct").innerHTML = "You survived with " + beetle + hocus+ getOut + beetle + saw + " points. "; 
+document.getElementById("number_correct").innerHTML = "You survived with " + score + " points. "; 
 document.getElementById("picture").src = images[range]; 
 }
