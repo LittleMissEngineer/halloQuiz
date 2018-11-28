@@ -8,7 +8,7 @@ function check(){
 
    /* let psycho = 0;
     let hocus = 0;
-    let getOut = 0;
+    
     let saw = 0;
     let beetle = 0; */
     let score = 0;
